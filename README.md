@@ -1,0 +1,1 @@
+This repository contains studio-ready computational design tools built for Rhino 8 using Grasshopper and CPython (Python 3). The focus is on modular, maintainable code that supports early-stage design exploration, rationalization, and sustainability-informed workflows.
