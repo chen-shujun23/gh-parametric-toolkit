@@ -26,9 +26,39 @@ the project modules.
 
 1. Open **Terminal**
 2. Set the environment variable:
-
+   ```bash
    export GH_PARAMETRIC_TOOLKIT="Users/YOURNAME/Documents/YOURFOLDER/gh-parametric-toolkit"
-
+   ```
 3. Launch Rhino from same Terminal window:
-
+   ```bash
    open -a "Rhino 8"
+   ```
+4. Keep Terminal open while Rhino is running
+5. Open `initialise_toolkit.gh` in Grasshopper
+
+### Windows
+
+1. Open **Command Prompt**
+2. Set the environment variable:
+   ```bat
+   set GH_PARAMETRIC_TOOLKIT=C:\Users\YOURNAME\Documents\YOURFOLDER\gh-parametric-toolkit
+   ```
+3. Launch Rhino from the same Command Prompt window:
+   ```bat
+   "C:\Program Files\Rhino 8\System\Rhino.exe"
+   ```
+4. Keep Command Prompt open while Rhino is running
+5. Open `initialise_toolkit.gh` in Grasshopper
+
+---
+
+## If it works
+
+You should see:
+`Toolkit initialised`
+![Toolkit initialised in Grasshopper](assets/initialise_toolkit_success.png)
+
+## If it does not work
+
+- Make sure Rhino was launched from Terminal
+- Ensure the environment variable is set as described above
