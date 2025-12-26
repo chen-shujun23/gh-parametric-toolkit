@@ -52,13 +52,27 @@ the project modules.
 
 ---
 
-## If it works
+## Initialise Toolkit (Setup Check)
+
+`initialise_toolkit.gh` is a setup and diagnostic tool.
+
+It does not configure the toolkit permanently.
+Instead, it checks that:
+
+- Rhino was launched correctly
+- the toolkit path is available
+- Python modules can be imported
+
+You can open this file at any time to verify that your setup is working.
+All other tools perform their own checks automatically.
+
+### If it works
 
 You should see:
 `Toolkit initialised`
 ![Toolkit initialised in Grasshopper](assets/initialise_toolkit_success.png)
 
-## If it does not work
+### If it does not work
 
 - Make sure Rhino was launched from Terminal / Command Prompt
 - Ensure the environment variable is set as described above
