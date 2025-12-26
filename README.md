@@ -60,5 +60,5 @@ You should see:
 
 ## If it does not work
 
-- Make sure Rhino was launched from Terminal
+- Make sure Rhino was launched from Terminal / Command Prompt
 - Ensure the environment variable is set as described above
