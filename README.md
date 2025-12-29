@@ -5,6 +5,21 @@ This repository focuses on **modular, readable, and extensible code** that suppo
 
 Grasshopper definitions act as **thin UI layers**, while core logic lives in reusable Python modules to support maintainability, testing, and team adoption.
 
+## Python-first User Objects
+
+This toolkit is distributed as **Grasshopper User Objects** rather than compiled plugins.
+
+The tools are developed primarily in **Python**, a language that is widely used and accessible within the architectural and computational design community. Python allows the logic to remain readable, adaptable, and easy to extend—both for the author and for architects who may want to understand or customize the workflows.
+
+Using User Objects helps keep the toolkit:
+
+- **Open source and transparent**, with no black-box components
+- **Approachable for architects**, even without formal software engineering backgrounds
+- **Easy to adapt and extend** within Grasshopper
+- **Low-friction to deploy** in professional environments
+
+This Python-first, User Object–based approach prioritizes clarity, learning, and flexibility, while leaving room for future evolution if more specialized tooling is needed.
+
 ---
 
 ## Compatibility
