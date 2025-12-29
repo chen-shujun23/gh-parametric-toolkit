@@ -6,6 +6,10 @@
 *.3dm~
 *.bak
 *.tmp
+*.gh~ 
+*.ghx~
+*.gh.recover
+*.ghx.recover
 
 # ------------------------------
 # Python
