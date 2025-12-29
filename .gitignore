@@ -10,6 +10,8 @@
 *.ghx~
 *.gh.recover
 *.ghx.recover
+*_autosave.gh
+*_autosave.ghx
 
 # ------------------------------
 # Python

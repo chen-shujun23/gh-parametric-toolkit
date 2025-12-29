@@ -1,9 +1,7 @@
-import os
-import sys
 import traceback
 
 
-def run_tool(fn):
+def run_tool(fn, debug=False):
     """
     Standard runner for GH tools.
 
@@ -14,8 +12,10 @@ def run_tool(fn):
     try:
         return fn(), []
 
-    except Exception:
-        return None, [
-            "TOOL: An error occurred while running the tool.",
-            traceback.format_exc()
-        ]
+    except Exception as e:
+        msg = f"TOOL ERROR: {e}\n\n"
+
+        if debug:
+            return None, [msg, traceback.format_exc()]
+        else:
+            return None, [msg]
