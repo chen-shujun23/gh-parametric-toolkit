@@ -15,7 +15,7 @@ def generate_panel_ids(u_count: int, v_count: int, prefix: str = "P"):
     ids = []
     for v in range(1, v_count + 1):
         for u in range(1, u_count + 1):
-            ids.append(f"{prefix}-{u:02d}-{v:02d}")
+            ids.append(f"{prefix}-{v:02d}-{u:02d}")
     return ids
 
 
