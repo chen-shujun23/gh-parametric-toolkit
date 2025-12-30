@@ -2,7 +2,6 @@
 # Rhino / Grasshopper
 # ------------------------------
 *.rhl
-*.ghuser
 *.3dm~
 *.bak
 *.tmp
