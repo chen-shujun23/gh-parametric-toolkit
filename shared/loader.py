@@ -1,7 +1,8 @@
 import traceback
+from typing import Callable, Tuple, List, Any
 
 
-def run_tool(fn, debug=False):
+def run_tool(fn: Callable[[], Any], debug: bool = False) -> Tuple[Any, List[str]]:
     """
     Standard runner for GH tools.
 

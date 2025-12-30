@@ -1,5 +1,5 @@
 """
-Minimal facade panelizer (Rhino 8 / Grasshopper CPython).
+Facade panelizer (Rhino 8 / Grasshopper CPython).
 
 - Accepts: Surface / BrepFace / Brep (single face used)
 - Returns: (panels, ids)
