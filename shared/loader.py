@@ -14,7 +14,7 @@ def run_tool(fn: Callable[[], Any], debug: bool = False) -> Tuple[Any, List[str]
         return fn(), []
 
     except Exception as e:
-        msg = f"TOOL ERROR: {e}\n\n"
+        msg = f"TOOL ERROR: {e}\n\nCheck your inputs and try again.\n\n"
 
         if debug:
             return None, [msg, traceback.format_exc()]
