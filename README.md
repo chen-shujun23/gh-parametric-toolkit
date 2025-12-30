@@ -42,7 +42,7 @@ the project modules.
 1. Open **Terminal**
 2. Set the environment variable:
    ```bash
-   export GH_PARAMETRIC_TOOLKIT="Users/YOURNAME/Documents/YOURFOLDER/gh-parametric-toolkit"
+   export GH_PARAMETRIC_TOOLKIT="/Users/YOURNAME/Documents/YOURFOLDER/gh-parametric-toolkit"
    ```
 3. Launch Rhino from same Terminal window:
    ```bash
