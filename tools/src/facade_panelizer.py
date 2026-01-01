@@ -8,18 +8,19 @@ Facade panelizer (Rhino 8 / Grasshopper CPython).
 import Rhino.Geometry as rg
 
 
-def generate_panel_ids(u_count: int, v_count: int, prefix: str = "P"):
+def generate_panel_ids(u_count: int, v_count: int, family_prefix: str = "P", surface_prefix: str = "F", surface_index: int = 1):
     if u_count <= 0 or v_count <= 0:
         raise ValueError("U and V counts must be > 0.")
 
     ids = []
     for v in range(1, v_count + 1):
         for u in range(1, u_count + 1):
-            ids.append(f"{prefix}-{v:02d}-{u:02d}")
+            ids.append(
+                f"{family_prefix}-{surface_prefix}{surface_index:02d}-{v:02d}-{u:02d}")
     return ids
 
 
-def panelize_surface(surface_input, u_count: int, v_count: int, prefix: str = "P"):
+def panelize_surface(surface_input, u_count: int, v_count: int, family_prefix: str = "P", surface_prefix: str = "F", surface_index: int = 1):
     """
     Panelize a surface into a u_count x v_count grid by sampling UV corners.
 
@@ -64,7 +65,8 @@ def panelize_surface(surface_input, u_count: int, v_count: int, prefix: str = "P
 
     panels = []
     dimensions = []
-    ids = generate_panel_ids(u_count, v_count, prefix)
+    ids = generate_panel_ids(
+        u_count, v_count, family_prefix, surface_prefix, surface_index)
 
     # Build one panel surface per UV cell (row-major order)
     for j in range(v_count):        # V cells (rows)
