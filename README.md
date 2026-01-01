@@ -48,8 +48,7 @@ the project modules.
    ```bash
    open -a "Rhino 8"
    ```
-4. Keep Terminal open while Rhino is running
-5. Open `initialise_toolkit.gh` in Grasshopper
+4. Open `initialise_toolkit.gh` in Grasshopper
 
 ### Windows
 
@@ -62,8 +61,7 @@ the project modules.
    ```bat
    "C:\Program Files\Rhino 8\System\Rhino.exe"
    ```
-4. Keep Command Prompt open while Rhino is running
-5. Open `initialise_toolkit.gh` in Grasshopper
+4. Open `initialise_toolkit.gh` in Grasshopper
 
 ---
 
