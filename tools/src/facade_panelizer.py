@@ -2,7 +2,7 @@
 Facade panelizer (Rhino 8 / Grasshopper CPython).
 
 - Accepts: Surface / BrepFace / Brep (single face used)
-- Returns: (panels, ids)
+- Returns: (panels, ids, dimensions)
 """
 
 import Rhino.Geometry as rg
@@ -24,8 +24,9 @@ def panelize_surface(surface_input, u_count: int, v_count: int, prefix: str = "P
     Panelize a surface into a u_count x v_count grid by sampling UV corners.
 
     Returns:
-      panels : list[rg.Surface]
-      ids    : list[str]
+      panels     : list[rg.Surface]
+      ids        : list[str]
+      dimensions : list[tuple(width, height)]
     """
     if surface_input is None:
         raise ValueError(
@@ -62,6 +63,7 @@ def panelize_surface(surface_input, u_count: int, v_count: int, prefix: str = "P
     ]
 
     panels = []
+    dimensions = []
     ids = generate_panel_ids(u_count, v_count, prefix)
 
     # Build one panel surface per UV cell (row-major order)
@@ -84,4 +86,9 @@ def panelize_surface(surface_input, u_count: int, v_count: int, prefix: str = "P
 
             panels.append(patch)
 
-    return panels, ids
+            # Calculate panel dimensions and round to nearest int
+            width = round(p00.DistanceTo(p10))
+            height = round(p00.DistanceTo(p01))
+            dimensions.append((width, height))
+
+    return panels, ids, dimensions
